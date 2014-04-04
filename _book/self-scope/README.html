@@ -1,0 +1,497 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Self, Scope &amp; Visibility | Gitbooks</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="frangucc">
+        <meta name="description" content="Book generated using GitBook">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../self-scope/default_object.html" />
+        
+        
+        <link rel="prev" href="../classes/inheritance.html" />
+        
+
+        <meta property="og:title" content="Self, Scope &amp; Visibility | Gitbooks">
+        <meta property="og:site_name" content="Gitbooks">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/frangucc">
+        <meta property="book:tag" content="GitBook">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../gitbook/style.css">
+
+        <script type="text/javascript">
+        (function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+        for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+        mixpanel.init("01eb2b950ae09a5fdb15a98dcc5ff20e");
+        </script>
+        
+    </head>
+    <body>
+        
+<div class="book with-summary" data-github="frangucc/gitbooks" data-level="5">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/frangucc/gitbooks" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/frangucc/gitbooks/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/frangucc/gitbooks/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../README.html" >Gitbooks</a></h1>
+</div>
+    <div class="book-summary">
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/frangucc" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/frangucc/gitbooks/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/frangucc/gitbooks/edit/master/self-scope/README.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0">
+            <a href="../README.html"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1">
+                
+                <a href="../objects/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Objects
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1">
+                            
+                            <a href="../objects/object_orientation.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Object Orientation
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2">
+                            
+                            <a href="../objects/creating_objects.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Creating Objects
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3">
+                            
+                            <a href="../objects/objects_behaviors.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Object Behavior
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2">
+                
+                <a href="../methods/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Methods
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1">
+                            
+                            <a href="../methods/message_passing.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Message Passing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2">
+                            
+                            <a href="../methods/arguments.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Arguments
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3">
+                            
+                            <a href="../methods/behavior.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Crafting Behavior
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3">
+                
+                <a href="../local-variables/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Local Variables
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1">
+                            
+                            <a href="../local-variables/assignment.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Assignment
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2">
+                            
+                            <a href="../local-variables/arguments.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> References
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4">
+                
+                <a href="../classes/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Classes
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1">
+                            
+                            <a href="../classes/custom_objects.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Custom Objects
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2">
+                            
+                            <a href="../classes/object_state.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Object State
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3">
+                            
+                            <a href="../classes/inheritance.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Inheritance
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li class="active" data-level="5">
+                
+                <a href="../self-scope/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Self, Scope &amp; Visibility
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1">
+                            
+                            <a href="../self-scope/default_object.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> The Default Object
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2">
+                            
+                            <a href="../self-scope/variable_scopes.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Variable Scopes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3">
+                            
+                            <a href="../self-scope/method_access.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Method Access Rules
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6">
+                
+                <a href="../control-flow/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Control Flow
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1">
+                            
+                            <a href="../control-flow/conditionals.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Conditionals
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2">
+                            
+                            <a href="../control-flow/loops.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Loops
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3">
+                            
+                            <a href="../control-flow/iterators.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Iterators
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4">
+                            
+                            <a href="../control-flow/exceptions.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Exceptions
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7">
+                
+                <a href="../strings-scalar/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Strings, Symbols &amp; Scalar Objects
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1">
+                            
+                            <a href="../strings-scalar/strings.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Strings
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2">
+                            
+                            <a href="../strings-scalar/symbols.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Symbols
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3">
+                            
+                            <a href="../strings-scalar/numbers.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Integers &amp; Floats
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4">
+                            
+                            <a href="../strings-scalar/other.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Other
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8">
+                
+                <a href="../collections/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Collections &amp; Container Objects
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1">
+                            
+                            <a href="../collections/arrays.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Arrays
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2">
+                            
+                            <a href="../collections/hashes.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Hashes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3">
+                            
+                            <a href="../collections/ranges.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Ranges
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.4">
+                            
+                            <a href="../collections/sets.html">
+                                <i class="fa fa-check"></i> <b>8.4)</b> Sets
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+    <div class="book-body" tabindex="-1">
+        <div class="page-wrapper">
+            <div class="book-progress">
+                <div class="bar">
+                    <div class="inner" style="width: 47.05882352941177%;min-width: 44.11764705882353%;"></div>
+                </div>
+                <div class="chapters">
+                
+                    <a href="../README.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+                
+                    <a href="../objects/README.html" title="Objects" class="chapter done new-chapter" data-progress="1" style="left: 2.9411764705882355%;"></a>
+                
+                    <a href="../objects/object_orientation.html" title="Object Orientation" class="chapter done " data-progress="1.1" style="left: 5.882352941176471%;"></a>
+                
+                    <a href="../objects/creating_objects.html" title="Creating Objects" class="chapter done " data-progress="1.2" style="left: 8.823529411764707%;"></a>
+                
+                    <a href="../objects/objects_behaviors.html" title="Object Behavior" class="chapter done " data-progress="1.3" style="left: 11.764705882352942%;"></a>
+                
+                    <a href="../methods/README.html" title="Methods" class="chapter done new-chapter" data-progress="2" style="left: 14.705882352941176%;"></a>
+                
+                    <a href="../methods/message_passing.html" title="Message Passing" class="chapter done " data-progress="2.1" style="left: 17.647058823529413%;"></a>
+                
+                    <a href="../methods/arguments.html" title="Arguments" class="chapter done " data-progress="2.2" style="left: 20.58823529411765%;"></a>
+                
+                    <a href="../methods/behavior.html" title="Crafting Behavior" class="chapter done " data-progress="2.3" style="left: 23.529411764705884%;"></a>
+                
+                    <a href="../local-variables/README.html" title="Local Variables" class="chapter done new-chapter" data-progress="3" style="left: 26.470588235294116%;"></a>
+                
+                    <a href="../local-variables/assignment.html" title="Assignment" class="chapter done " data-progress="3.1" style="left: 29.41176470588235%;"></a>
+                
+                    <a href="../local-variables/arguments.html" title="References" class="chapter done " data-progress="3.2" style="left: 32.35294117647059%;"></a>
+                
+                    <a href="../classes/README.html" title="Classes" class="chapter done new-chapter" data-progress="4" style="left: 35.294117647058826%;"></a>
+                
+                    <a href="../classes/custom_objects.html" title="Custom Objects" class="chapter done " data-progress="4.1" style="left: 38.23529411764706%;"></a>
+                
+                    <a href="../classes/object_state.html" title="Object State" class="chapter done " data-progress="4.2" style="left: 41.1764705882353%;"></a>
+                
+                    <a href="../classes/inheritance.html" title="Inheritance" class="chapter done " data-progress="4.3" style="left: 44.11764705882353%;"></a>
+                
+                    <a href="../self-scope/README.html" title="Self, Scope &amp; Visibility" class="chapter done new-chapter" data-progress="5" style="left: 47.05882352941177%;"></a>
+                
+                    <a href="../self-scope/default_object.html" title="The Default Object" class="chapter  " data-progress="5.1" style="left: 50%;"></a>
+                
+                    <a href="../self-scope/variable_scopes.html" title="Variable Scopes" class="chapter  " data-progress="5.2" style="left: 52.94117647058823%;"></a>
+                
+                    <a href="../self-scope/method_access.html" title="Method Access Rules" class="chapter  " data-progress="5.3" style="left: 55.88235294117647%;"></a>
+                
+                    <a href="../control-flow/README.html" title="Control Flow" class="chapter  new-chapter" data-progress="6" style="left: 58.8235294117647%;"></a>
+                
+                    <a href="../control-flow/conditionals.html" title="Conditionals" class="chapter  " data-progress="6.1" style="left: 61.76470588235294%;"></a>
+                
+                    <a href="../control-flow/loops.html" title="Loops" class="chapter  " data-progress="6.2" style="left: 64.70588235294117%;"></a>
+                
+                    <a href="../control-flow/iterators.html" title="Iterators" class="chapter  " data-progress="6.3" style="left: 67.6470588235294%;"></a>
+                
+                    <a href="../control-flow/exceptions.html" title="Exceptions" class="chapter  " data-progress="6.4" style="left: 70.58823529411765%;"></a>
+                
+                    <a href="../strings-scalar/README.html" title="Strings, Symbols &amp; Scalar Objects" class="chapter  new-chapter" data-progress="7" style="left: 73.52941176470588%;"></a>
+                
+                    <a href="../strings-scalar/strings.html" title="Strings" class="chapter  " data-progress="7.1" style="left: 76.47058823529412%;"></a>
+                
+                    <a href="../strings-scalar/symbols.html" title="Symbols" class="chapter  " data-progress="7.2" style="left: 79.41176470588235%;"></a>
+                
+                    <a href="../strings-scalar/numbers.html" title="Integers &amp; Floats" class="chapter  " data-progress="7.3" style="left: 82.3529411764706%;"></a>
+                
+                    <a href="../strings-scalar/other.html" title="Other" class="chapter  " data-progress="7.4" style="left: 85.29411764705883%;"></a>
+                
+                    <a href="../collections/README.html" title="Collections &amp; Container Objects" class="chapter  new-chapter" data-progress="8" style="left: 88.23529411764706%;"></a>
+                
+                    <a href="../collections/arrays.html" title="Arrays" class="chapter  " data-progress="8.1" style="left: 91.17647058823529%;"></a>
+                
+                    <a href="../collections/hashes.html" title="Hashes" class="chapter  " data-progress="8.2" style="left: 94.11764705882354%;"></a>
+                
+                    <a href="../collections/ranges.html" title="Ranges" class="chapter  " data-progress="8.3" style="left: 97.05882352941177%;"></a>
+                
+                    <a href="../collections/sets.html" title="Sets" class="chapter  " data-progress="8.4" style="left: 100%;"></a>
+                
+                </div>
+            </div>
+
+            <div class="page-inner">
+            
+            </div>
+
+            <div class="page-footer">
+                
+                    
+                        
+                        <a href="../self-scope/default_object.html" class="navigation-link next">Next</a>
+                        
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+    </body>
+</html>

@@ -1,2 +1,8 @@
-gitbooks
+Intro to Ruby 
 ========
+
+Francke Jones
+
+
+
+
